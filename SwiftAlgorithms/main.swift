@@ -1,11 +1,3 @@
-//
-//  main.swift
-//  SwiftAlgorithms
-//
-//  Created by Ouahchia, Mohamed (JD) on 31/10/2023.
-//
+let data = [5,4,8,3,2,6]
 
-import Foundation
-
-print("Hello, World!")
-
+print(miscSort(array: data))
