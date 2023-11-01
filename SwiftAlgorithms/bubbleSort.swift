@@ -11,10 +11,12 @@ func bubbleSort(data: inout [Int]) {
     let length = data.count
     var currentComparisonIndex = 1
     var index = 0
-    var passes = 2
-    while (passes != 0) {
-        passes = 0
-        for i in (0...length) {
+    var swaps = 1
+    while (swaps != 0) {
+        swaps = 0
+        index = 0
+        currentComparisonIndex = 1
+        for _ in (0...length) {
             let currentValue = data[index]
             if currentComparisonIndex < length {
                 print(index, currentComparisonIndex, currentValue, data[currentComparisonIndex])
@@ -22,12 +24,13 @@ func bubbleSort(data: inout [Int]) {
                     let temp = data[currentComparisonIndex]
                     data[currentComparisonIndex] = currentValue
                     data[index] = temp
-                    passes += 1
+                    swaps += 1
                 }
                 currentComparisonIndex += 1
                 index += 1
-                print(data)
+                
             }
         }
+        print(data, swaps)
     }
 }
