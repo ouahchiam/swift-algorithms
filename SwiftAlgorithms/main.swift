@@ -1,3 +1,4 @@
-let data = [5,4,8,3,2,6]
+var data = [5,4,8,3,2,6]
 
-print(miscSort(array: data))
+bubbleSort(data: &data)
+print(data)
