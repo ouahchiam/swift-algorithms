@@ -19,7 +19,6 @@ func bubbleSort(data: inout [Int]) {
         for _ in (0...length) {
             let currentValue = data[index]
             if currentComparisonIndex < length {
-                print(index, currentComparisonIndex, currentValue, data[currentComparisonIndex])
                 if (currentValue > data[currentComparisonIndex]) {
                     let temp = data[currentComparisonIndex]
                     data[currentComparisonIndex] = currentValue
@@ -31,6 +30,5 @@ func bubbleSort(data: inout [Int]) {
                 
             }
         }
-        print(data, swaps)
     }
 }
