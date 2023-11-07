@@ -14,24 +14,22 @@ func quickSort(data: [Int]) -> [Int]{
     
     for (i, v) in data.enumerated() {
         if i != 0 {
-            if v <= pivot {
-                left.append(v)
+            if v >= pivot {
+                right.append(v)
             }
             else {
-                right.append(v)
+                left.append(v)
             }
         }
         
     }
-    print("a", left, right)
     var newData = [Int]()
-    if left.count > 1 {
+    if left.count > 0 {
         newData.append(contentsOf: quickSort(data: left))
     }
     newData.append(pivot)
-    if right.count > 1 {
+    if right.count > 0 {
         newData.append(contentsOf: quickSort(data: right))
     }
-    print("b", newData)
     return newData
 }

@@ -1,6 +1,6 @@
 import Foundation
 
-var data = [1,2,4,3,5]
+var data = [30,20,50,10,60,70]
 
 let timeQS = CFAbsoluteTimeGetCurrent();
 let result = quickSort(data: data)
