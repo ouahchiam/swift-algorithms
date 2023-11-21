@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class SwiftAlgorithmsTestCases: XCTestCase {
+final class TestCases: XCTestCase {
     
     // TEST DRIVEN DEVELOPMENT (TDD)
     // The tests are driving what we develop
@@ -67,11 +67,37 @@ final class SwiftAlgorithmsTestCases: XCTestCase {
         let sut = Algorithm()
         let searchData = [1,2,3,4,5,6]
         let searchItem = 4
-        let expected = true
+        let _expected = true
         
         // ACT
         measure {
-            let actual = sut.linearSearchReturnsBool(data: searchData, item: searchItem)
+            let _actual = sut.linearSearchReturnsBool(data: searchData, item: searchItem)
         }
+    }
+    
+    func testQuickSortWithRandomArray() {
+        // ARRANGE
+        let sut = Algorithm()
+        let randomArray = generateArray(size: 100, min: 1, max: 100);
+        let expected: [Int] = randomArray.sorted()
+
+        // ACT
+        let actual = sut.quickSort(data: randomArray)
+
+        // ASSERT
+        XCTAssertEqual(actual, expected)
+    }
+    
+    func testBubbleSortWithRandomArray() {
+        // ARRANGE
+        let sut = Algorithm()
+        var randomArray = generateArray(size: 100, min: 1, max: 100);
+        let expected: [Int] = randomArray.sorted()
+
+        // ACT
+        sut.bubbleSort(data: &randomArray)
+
+        // ASSERT
+        XCTAssertEqual(randomArray, expected)
     }
 }

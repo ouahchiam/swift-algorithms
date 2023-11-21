@@ -7,10 +7,12 @@
 
 import Foundation
 
-func generateArray(size: Int, min: Int, max: Int) -> [Int] {
-    var array = [Int]()
-    for _ in 1...size {
-        array.append(Int.random(in: min...max))
+
+    func generateArray(size: Int, min: Int, max: Int) -> [Int] {
+        var array = [Int]()
+        for _ in 1...size {
+            array.append(Int.random(in: min...max))
+        }
+        return array
     }
-    return array
-}
+
