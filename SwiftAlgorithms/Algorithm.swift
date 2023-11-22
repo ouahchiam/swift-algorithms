@@ -17,7 +17,7 @@ class Algorithm {
         }
         return false
     }
-    
+     
     func bubbleSort(data: inout [Int]) {
         let length = data.count
         var currentComparisonIndex = 1
@@ -43,6 +43,16 @@ class Algorithm {
             }
         }
     }
+    
+    func insertionSort(data: [Int]) -> [Int] {
+        var sorted = [Int]()
+        var current = 1
+        
+        
+        
+        return [Int]()
+    }
+    
     func quickSort(data: [Int]) -> [Int]{
         let pivot = data[0]
         var left = [Int]()
