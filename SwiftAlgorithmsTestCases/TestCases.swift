@@ -100,4 +100,76 @@ final class TestCases: XCTestCase {
         // ASSERT
         XCTAssertEqual(randomArray, expected)
     }
+    
+    func testBubbleSortPerfWorstCase100() {
+        let sut = Algorithm()
+        var randomArray = generateArray(size: 100, min: 1, max: 100000).sorted { $0 > $1 };
+
+        measure {
+            sut.bubbleSort(data: &randomArray)
+        }
+        
+    }
+    
+    func testBubbleSortPerfWorstCase1000() {
+        let sut = Algorithm()
+        var randomArray = generateArray(size: 1000, min: 1, max: 100000).sorted { $0 > $1 };
+
+        measure {
+            sut.bubbleSort(data: &randomArray)
+        }
+        
+    }
+    
+    func testBubbleSortPerfWorstCase10000() {
+        let sut = Algorithm()
+        var randomArray = generateArray(size: 10000, min: 1, max: 100000).sorted { $0 > $1 };
+
+        measure {
+            sut.bubbleSort(data: &randomArray)
+        }
+        
+    }
+    
+    func testBubbleSortPerfWorstCase100000() {
+        let sut = Algorithm()
+        var randomArray = generateArray(size: 100000, min: 1, max: 100000).sorted { $0 > $1 };
+
+        measure {
+            sut.bubbleSort(data: &randomArray)
+        }
+        
+    }
+    
+    func testBubbleSortPerfBestCase() {
+        let sut = Algorithm()
+        var randomArray = generateArray(size: 10000, min: 1, max: 100000).sorted();
+        //let expected: [Int] = randomArray.sorted()
+
+        measure {
+            sut.bubbleSort(data: &randomArray)
+        }
+        
+    }
+    func testBubbleSortPerfAverageCase() {
+        let sut = Algorithm()
+        var randomArray = generateArray(size: 10000, min: 1, max: 100000);
+        //let expected: [Int] = randomArray.sorted()
+
+        measure {
+            sut.bubbleSort(data: &randomArray)
+        }
+        
+    }
+    
+    func testQuickSortPerfWorstCase() {
+        let sut = Algorithm()
+        var randomArray = generateArray(size: 10000, min: 1, max: 100000).sorted();
+        //let expected: [Int] = randomArray.sorted()
+
+        measure {
+            sut.quickSort(data: randomArray)
+        }
+        
+    }
 }
